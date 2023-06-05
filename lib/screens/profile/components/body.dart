@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:facebookui/constants.dart';
+import 'package:facebookui/screens/profile/components/friends_field.dart';
+import 'package:facebookui/screens/profile/components/profile_details_field.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -15,11 +17,6 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          const Text(
-            'Satou Kazuma',
-            style: TextStyle(
-                color: kTextColor, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
           const SizedBox(height: 8),
           Stack(
             children: [
@@ -58,28 +55,87 @@ class Body extends StatelessWidget {
           const SizedBox(height: 16),
           Row(
             children: [
-              ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: kPrimaryColor,
-                  ),
-                  onPressed: () {},
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.add,
-                        color: kTextColor,
-                      ),
-                      SizedBox(
-                        width: 4,
-                      ),
-                      Text(
-                        'Add to story',
-                        style: TextStyle(color: kTextColor),
-                      )
-                    ],
-                  ))
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
+                  decoration: BoxDecoration(
+                      color: kPrimaryColor,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Row(children: const [
+                    Icon(
+                      Icons.add,
+                      color: kTextColor,
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      'Add to Story',
+                      style: TextStyle(color: kTextColor),
+                    )
+                  ]),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 18, vertical: 6),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF474e4c),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Row(children: const [
+                    Icon(
+                      Icons.edit,
+                      color: kTextColor,
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Text(
+                      'Edit profile',
+                      style: TextStyle(color: kTextColor),
+                    )
+                  ]),
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
+                  decoration: BoxDecoration(
+                      color: Color(0xFF474e4c),
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Row(children: const [
+                    Icon(
+                      Icons.more_horiz,
+                      color: kTextColor,
+                    ),
+                  ]),
+                ),
+              ),
             ],
-          )
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          Divider(
+            color: kTextColor,
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          ProfileDetailsField(),
+          FriendsField(),
         ]),
       ),
     );

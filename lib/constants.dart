@@ -4,6 +4,7 @@ const kTextColor = Color(0xFFFFFFFF);
 const kPrimaryColor = Color(0xFF2d89ff);
 const kBackgroundColor = Color(0xFF191a1c);
 const kComponentBackgroundColor = Color(0xFF242527);
+const kSecondaryColor = Color(0xFF474e4c);
 
 const kAnimationDurationn = Duration(microseconds: 200);
 
