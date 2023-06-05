@@ -1,5 +1,10 @@
 import 'package:facebookui/constants.dart';
 import 'package:facebookui/enum.dart';
+import 'package:facebookui/screens/friends/friends_screen.dart';
+import 'package:facebookui/screens/home/home_screen.dart';
+import 'package:facebookui/screens/marketplace/marketplace_screen.dart';
+import 'package:facebookui/screens/notifications/notification_screen.dart';
+import 'package:facebookui/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class CustomHeaderNav extends StatelessWidget implements PreferredSize {
@@ -76,7 +81,9 @@ class CustomHeaderNav extends StatelessWidget implements PreferredSize {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, HomeScreen.routeName);
+                  },
                   icon: const Icon(Icons.home),
                   color: MenuState.home == selectedMenu
                       ? kPrimaryColor
@@ -84,7 +91,9 @@ class CustomHeaderNav extends StatelessWidget implements PreferredSize {
                   iconSize: 28,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, FriendsScreen.routeName);
+                  },
                   icon: const Icon(Icons.group_outlined),
                   color: MenuState.friends == selectedMenu
                       ? kPrimaryColor
@@ -92,7 +101,9 @@ class CustomHeaderNav extends StatelessWidget implements PreferredSize {
                   iconSize: 28,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, MarketplaceScreen.routeName);
+                  },
                   icon: const Icon(Icons.maps_home_work_outlined),
                   color: MenuState.marketplace == selectedMenu
                       ? kPrimaryColor
@@ -100,7 +111,9 @@ class CustomHeaderNav extends StatelessWidget implements PreferredSize {
                   iconSize: 28,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, ProfileScreen.routeName);
+                  },
                   icon: const Icon(Icons.person_outlined),
                   color: MenuState.profile == selectedMenu
                       ? kPrimaryColor
@@ -108,7 +121,9 @@ class CustomHeaderNav extends StatelessWidget implements PreferredSize {
                   iconSize: 28,
                 ),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, NotificationScreen.routeName);
+                  },
                   icon: const Icon(Icons.notifications_outlined),
                   color: MenuState.notifications == selectedMenu
                       ? kPrimaryColor
