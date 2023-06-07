@@ -19,7 +19,10 @@ class UserStory extends StatelessWidget {
           width: double.infinity,
           height: 110,
           decoration: const BoxDecoration(
-              color: Colors.blueGrey,
+              image: DecorationImage(
+                  image: NetworkImage(
+                      'https://i.pinimg.com/550x/a6/a0/7b/a6a07b879f97989ae6f2a8b196ba267f.jpg'),
+                  fit: BoxFit.cover),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(8), topRight: Radius.circular(8))),
         ),

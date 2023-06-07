@@ -15,7 +15,10 @@ class PostingField extends StatelessWidget {
       decoration: const BoxDecoration(color: kComponentBackgroundColor),
       child: Row(
         children: [
-          const CircleAvatar(),
+          const CircleAvatar(
+            backgroundImage: NetworkImage(
+                'https://i.pinimg.com/550x/a6/a0/7b/a6a07b879f97989ae6f2a8b196ba267f.jpg'),
+          ),
           const SizedBox(
             width: 10,
           ),

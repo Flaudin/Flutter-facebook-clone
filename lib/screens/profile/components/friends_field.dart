@@ -38,15 +38,27 @@ class FriendsField extends StatelessWidget {
         ),
         const Row(
           children: [
-            FriendBox(),
+            FriendBox(
+              username: 'Chomuske',
+              userimage:
+                  'https://static.wikia.nocookie.net/konosuba/images/4/4d/Prev_Chomusuke.png',
+            ),
             SizedBox(
               width: 14,
             ),
-            FriendBox(),
+            FriendBox(
+              username: 'Megumin',
+              userimage:
+                  'https://static.wikia.nocookie.net/the-muse-list/images/4/44/Megumin.jpg/revision/latest?cb=20200606070218',
+            ),
             SizedBox(
               width: 14,
             ),
-            FriendBox(),
+            FriendBox(
+              username: 'Yunyun',
+              userimage:
+                  'https://otakotaku.com/asset/img/character/2022/12/yunyun-638c8d0e6152fp.jpg',
+            ),
           ],
         ),
         const SizedBox(
@@ -66,6 +78,9 @@ class FriendsField extends StatelessWidget {
             ),
           ),
         ),
+        const SizedBox(
+          height: 12,
+        )
       ],
     );
   }

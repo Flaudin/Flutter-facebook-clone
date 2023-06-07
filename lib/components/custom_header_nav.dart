@@ -131,6 +131,8 @@ class CustomHeaderNav extends StatelessWidget implements PreferredSize {
                   iconSize: 28,
                 ),
                 const CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      'https://i.pinimg.com/550x/a6/a0/7b/a6a07b879f97989ae6f2a8b196ba267f.jpg'),
                   radius: 10.5,
                 ),
               ],

@@ -1,5 +1,6 @@
 import 'package:facebookui/components/custom_header_nav.dart';
 import 'package:facebookui/enum.dart';
+import 'package:facebookui/screens/notifications/components/body.dart';
 import 'package:flutter/material.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -10,6 +11,7 @@ class NotificationScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomHeaderNav(selectedMenu: MenuState.notifications),
+      body: Body(),
     );
   }
 }

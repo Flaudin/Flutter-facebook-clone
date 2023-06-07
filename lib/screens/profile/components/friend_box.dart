@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 
 class FriendBox extends StatelessWidget {
   const FriendBox({
-    super.key,
-  });
+    Key? key,
+    required this.userimage,
+    required this.username,
+  }) : super(key: key);
+
+  final String username, userimage;
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +24,16 @@ class FriendBox extends StatelessWidget {
               height: 94,
               width: 98,
               decoration: BoxDecoration(
-                  color: Colors.pink, borderRadius: BorderRadius.circular(8))),
+                  image: DecorationImage(
+                      image: NetworkImage(userimage), fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(8))),
         ),
-        const Positioned(
+        Positioned(
           left: 8,
           bottom: 2,
           child: Text(
-            'Chomuske',
-            style: TextStyle(
+            username,
+            style: const TextStyle(
                 color: kTextColor, fontSize: 14, fontWeight: FontWeight.bold),
           ),
         )
