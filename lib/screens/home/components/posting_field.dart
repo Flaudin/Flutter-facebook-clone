@@ -24,6 +24,7 @@ class PostingField extends StatelessWidget {
           ),
           Expanded(
             child: TextField(
+                style: const TextStyle(color: kTextColor),
                 decoration: InputDecoration(
                     filled: true,
                     fillColor: const Color(0xFF474e4c),
